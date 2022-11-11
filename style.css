@@ -15,6 +15,7 @@
 /* || General styles */
 
 body {
+    margin: 0px;
     font-family: "Open Sans", sans-serif;
     color: var(--main-font-color);
     background-color: var(--background-color);
@@ -28,13 +29,9 @@ hr {
 
 /* || Header styles */
 
-#page-icon {
-    height: 50px;
-    border-radius: 100%;
-}
+
 
 #header {
-    position: fixed;
     width: 100%;
     left: 0px;
     top: 0px;
@@ -43,16 +40,26 @@ hr {
 }
 
 .grid-div {
-
-    white-space: nowrap;
-    height: min-content;
     display: grid;
-    grid-template-columns: 55px 150px auto auto auto auto;
+    grid-template-columns: 200px 200px auto auto auto auto 200px;
+    grid-template-rows: auto;
+}
+
+.icon {
+    padding-right: 5px;
+}
+
+.icon img {
+    margin: auto;
+    display: block;
+    height: 50px;
+    border-radius: 100%;
 }
 
 .grid-item {
-    text-align: center;
-    padding: 5px;
+    display: flex;
+    padding: 10px;
+    height: auto;
     font-size: medium;
 }
 
@@ -68,26 +75,37 @@ hr {
     width: 100%;
     height: 100%;
     background-color: #00000000;
-    transition: 1s;
+    transition: .5s;
 }
 
 .grid-button:hover {
     color: var(--background-color);
-    transition: 1s;
+    transition: .25s;
     background-color: #ffffff;
+}
+
+/* … */
+
+
+/* || Center styles */
+#center {
+    margin: 15px;
+    display: grid;
+    grid-template-columns: 60% auto;
 }
 
 /* … */
 
 /* || Footer styles */
 #footer {
+    color: #505050;
     text-align: center;
+    font-size: smaller;
 
-    /* Making it fixed on the bottom of the screen */
-    position: fixed;
     width: 100%;
-    left: 0px;
+    position: fixed;
     bottom: 0px;
+    left: 0px;
 
     box-shadow: var(--white-overlay);
 }
